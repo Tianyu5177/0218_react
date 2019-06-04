@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  
+  class Person {
+    constructor(name,age){
+      this.name = name
+      this.age = age
+    }
+    
+    sing(){
+      console.log('哼哼哈嘿',this)
+    }
+    
+    speak(){
+      console.log(this.name)
+      this.sing()
+    }
+  }
+  
+  let p = new Person('kobe',18)
+  p.speak()
+  
+/*  class Student extends Person{
+    constructor(name,age,grade){
+      super(name,age)
+      this.grade = grade
+    }
+    study(){
+      console.log('学习很开心')
+    }
+  }
+  
+  let s = new Student('kobe',18,3)*/
+  
+  
+</script>
+
+</body>
+</html>
