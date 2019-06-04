@@ -7,6 +7,7 @@
 <body>
 
 <div id="example"></div>
+<div id="example2"></div>
 
 <script type="text/javascript" src="../js/react.development.js"></script>
 <script type="text/javascript" src="../js/react-dom.development.js"></script>
@@ -34,7 +35,7 @@
     handlerClick(){
       let isPig = !this.state.isPig
       //如下代码属于直接更改状态，不会被react所认可，不会被react“监听”到
-      //this.state.isPig = isPig
+      //this.state.isPig = isPig //不可以直接修改状态数据
       //要更新状态，必须使用this.setState()
       this.setState({isPig})
     }
@@ -50,6 +51,7 @@
   
   //2.渲染组件标签
   ReactDOM.render(<Pig/>,document.getElementById('example'))
+  ReactDOM.render(<Pig/>,document.getElementById('example2'))
   
   
   
