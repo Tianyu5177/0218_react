@@ -18,7 +18,8 @@
 
 <script type="text/babel">//告诉babel，将如下jsx代码翻译成原生js代码
   //1.创建一个虚拟DOM
-  let vDOM = <span>hello,react</span> //此处没有单引号！！！，这里是jsx语法。
+  let vDOM = <h2>hello,react</h2> //此处没有单引号！！！，这里是jsx语法。
+  console.log(vDOM,typeof vDOM)
   
   //2.渲染虚拟DOM到页面
   ReactDOM.render(vDOM,document.getElementById('test'))
