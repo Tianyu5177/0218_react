@@ -27,6 +27,10 @@
   //使用ES6类定义组件
   class Person extends React.Component{
 
+    /*
+    * 备注：
+    * 类里面的方法一旦加上static关键字，该方法只能有类本身调用，类的实例对象不能使用。
+    * */
     //限制接收参数的类型以及必要性
     static propTypes = {
       name:PropTypes.string.isRequired,
@@ -34,11 +38,12 @@
       age:PropTypes.number
     }
     
-    //设置传参的默认值
+    //设置参数的默认值
     static defaultProps = {
       age:18
     }
     
+    //重写父类的render方法
     render(){
       let {name,age,sex} = this.props
       return (
@@ -51,7 +56,6 @@
       )
     }
   }
-  
   
   //2.工厂函数创建组件
   /*function Person(prop) {
