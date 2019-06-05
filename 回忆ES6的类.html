@@ -6,14 +6,13 @@
 </head>
 <body>
 <script>
-  
   class Person {
     constructor(name,age){
       this.name = name
       this.age = age
     }
     
-    sing(){
+    static sing(){
       console.log('哼哼哈嘿',this)
     }
     
@@ -24,7 +23,7 @@
   }
   
   let p = new Person('kobe',18)
-  p.speak()
+  //Person.drive()
   
 /*  class Student extends Person{
     constructor(name,age,grade){
@@ -37,7 +36,19 @@
   }
   
   let s = new Student('kobe',18,3)*/
+
+/*function Person(name,age) {
+  this.name = name
+  this.age = age
   
+  console.log(this)
+  
+  this.demo = function () {
+    console.log('demo')
+  }
+}
+let p = new Person('wade',18)
+  */
   
 </script>
 
