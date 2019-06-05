@@ -42,7 +42,7 @@
     render(){
       return (
         <form onSubmit={this.handlerSubmit}>
-          用户名：<input type="text" />
+          用户名：<input type="text" onChange={this.handlerChange}/>
           密码：<input type="password" ref={this.myRef}/>
           <button>登录</button>
         </form>
