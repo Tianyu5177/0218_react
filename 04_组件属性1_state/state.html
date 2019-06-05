@@ -23,6 +23,7 @@
   //1.定义组件
   class Pig extends React.Component{
     constructor(props){
+      //console.log(props)
       super(props)
       //初始化状态
       this.state = {
@@ -30,7 +31,7 @@
       }
       this.handlerClick = this.handlerClick.bind(this)
     }
-
+    
     //自定义一个响应点击的函数
     handlerClick(){
       let isPig = !this.state.isPig
@@ -42,6 +43,7 @@
     
     //重写父类的render
     render(){
+      //console.log('render()')
       let {isPig} = this.state
       //如下代码，在指定点击事件的时候，不要加()
       return <h2 onClick={this.handlerClick}>{isPig?'佩奇是一头可爱的猪':'佩奇不是猪'}</h2>
@@ -51,7 +53,6 @@
   
   //2.渲染组件标签
   ReactDOM.render(<Pig/>,document.getElementById('example'))
-  ReactDOM.render(<Pig/>,document.getElementById('example2'))
   
   
   

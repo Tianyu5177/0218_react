@@ -26,6 +26,19 @@
   //1.定义组件
   //使用ES6类定义组件
   class Person extends React.Component{
+
+    //限制接收参数的类型以及必要性
+    static propTypes = {
+      name:PropTypes.string.isRequired,
+      sex:PropTypes.string.isRequired,
+      age:PropTypes.number
+    }
+    
+    //设置传参的默认值
+    static defaultProps = {
+      age:18
+    }
+    
     render(){
       let {name,age,sex} = this.props
       return (
@@ -39,11 +52,6 @@
     }
   }
   
-  Person.propTypes = {
-    name:PropTypes.string.isRequired,
-    sex:PropTypes.string.isRequired,
-    age:PropTypes.number.isRequired
-  }
   
   //2.工厂函数创建组件
   /*function Person(prop) {
@@ -57,10 +65,9 @@
     )
   }*/
   
-  
   let p1 = {
     name:'张三',
-    age:18,
+    age:19,
     sex:'男'
   }
 
@@ -71,7 +78,7 @@
   }
   
   //2.渲染组件标签
-  ReactDOM.render(<Person name={p1.name} age={p1.age} sex={p1.sex}/>,document.getElementById('example1'))
+  ReactDOM.render(<Person name={p1.name} sex={p1.sex}/>,document.getElementById('example1'))
   ReactDOM.render(<Person {...p2}/>,document.getElementById('example2'))
   
 
