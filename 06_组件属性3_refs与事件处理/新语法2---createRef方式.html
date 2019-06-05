@@ -42,7 +42,7 @@
     render(){
       return (
         <div>
-          {/*如下代码的意思是：将组件对象身上的myRef中放入当前元素(DOM)*/}
+          {/*如下代码的意思是：将当前元素放入组件对象身上的myRef容器中*/}
           <input type="text" ref={this.myRef}/>&nbsp;
           <button onClick={this.handlerClick}>弹出数据</button>&nbsp;
           <input type="text" placeholder="失去焦点弹出数据" onBlur={this.handlerBlur}/>&nbsp;

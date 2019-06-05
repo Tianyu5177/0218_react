@@ -87,6 +87,10 @@
 
     //定义Show组件
     class Show extends React.Component{
+
+      componentWillReceiveProps(){
+        console.log('--componentWillReceiveProps--')
+      }
       
       //限制接收参数的类型以及必要性
       static propTypes = {
