@@ -110,7 +110,9 @@
 
     sort = () => {
       const {persons} = this.state
-      persons.sort((p1, p2) => p1.age - p2.age)
+      persons.sort((p1, p2) => {
+        return p1.age - p2.age
+      })
       this.setState({persons})
     }
   
