@@ -37,7 +37,7 @@
 	        return <h1>自定义内容</h1>
 	      }
 	   }
-	ReactDOM.render(<MyComponent2/>, domContainer)
+		ReactDOM.render(<MyComponent2/>, domContainer)
 
 ###7.说说类组件、工厂函数式组件的区别？
 1. 类组件: 使用class定义的组件, 会产生组件对象, 可以有自身的状态和生命周期勾子

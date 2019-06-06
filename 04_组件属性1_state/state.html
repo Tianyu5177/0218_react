@@ -35,7 +35,7 @@
     //自定义一个响应点击的函数
     handlerClick(){
       let isPig = !this.state.isPig
-      //如下代码属于直接更改状态，不会被react所认可，不会被react“监听”到
+      //如下代码属于直接更新状态，不会被react所认可，不会被react“监听”到
       //this.state.isPig = isPig //不可以直接修改状态数据
       //要更新状态，必须使用this.setState()
       this.setState({isPig})
